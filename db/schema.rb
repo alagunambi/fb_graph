@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110927070839) do
+ActiveRecord::Schema.define(:version => 20120625171904) do
 
   create_table "achievements", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(:version => 20110927070839) do
   create_table "facebooks", :force => true do |t|
     t.string   "identifier",   :limit => 20
     t.string   "access_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parcels", :force => true do |t|
+    t.string   "title"
+    t.text     "message"
+    t.datetime "schedule"
+    t.integer  "category"
+    t.integer  "status"
+    t.integer  "user_id"
+    t.string   "to"
+    t.string   "from"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

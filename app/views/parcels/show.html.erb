@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @parcel.title %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @parcel.message %>
+</p>
+
+<p>
+  <b>Schedule:</b>
+  <%= @parcel.schedule %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @parcel.category %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @parcel.status %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @parcel.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_parcel_path(@parcel) %> |
+<%= link_to 'Back', parcels_path %>

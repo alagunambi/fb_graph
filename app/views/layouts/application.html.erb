@@ -6,24 +6,37 @@
     <!--[if IE]>
     <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <%= stylesheet_link_tag 'base', 'layout', 'gritter', controller_name %>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <%# stylesheet_link_tag 'base', 'layout', 'gritter', controller_name %>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    
+    <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+
+    <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+    <script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
     <%= javascript_include_tag 'rails', 'jquery.gritter' %>
     <%= csrf_meta_tag %>
     <%= yield :head %>
   </head>
-  <body>
-    <div id="fb-root"></div>
-    <h1><%= link_to "FbGraph Sample", root_path %></h1>
-    <div class="container">
+  <body >
+  <div data-role="page" data-theme="a">
+    <div data-role="header">
+     <%= link_to "Home", root_path, :data => { :icon => "home" }, :class => "ui-btn-left" %>
+     <h1><%= link_to "Plan Later", root_path %></h1>  
+    <% if authenticated? %>
+      <%= link_to "Logout", facebook_path, :method => :delete, :data => { :icon => "delete" }, :class => "ui-btn-right" %>
+    <% end %>
+    
+  </div>
+    
+    <div class="container" data-role="content" >
       <div class="main">
         <%= yield %>
       </div>
-      <aside class="sidebar">
-        <%= render :partial => 'layouts/sidebar' %>
-      </aside>
+      
+       
     </div>
-    <%= render 'layouts/footer' %>
     <script src="http://connect.facebook.net/en_US/all.js"></script>
     <script>
       FB.init({
@@ -33,24 +46,7 @@
         oauth: true
       });
     </script>
-    <script type="text/javascript">
-      $(function () {
-        <% if flash[:error] %>
-          $.gritter.add({
-            title: "<%= flash[:error][:title] %>",
-            text : "<%= flash[:error][:message] %>",
-            image: "<%= flash[:error][:image] %>",
-            time : 5000
-          });
-        <% elsif flash[:notice] %>
-          $.gritter.add({
-            title: "<%= flash[:notice][:title] %>",
-            text : "<%= flash[:notice][:message] %>",
-            image: "<%= flash[:notice][:image] %>",
-            time : 3000
-          });
-        <% end %>
-      });
-    </script>
+  </div>
+
   </body>
 </html>

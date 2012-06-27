@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       :message => e.message
     }
     current_user.try(:destroy)
-    redirect_to root_url
+    redirect_to parcels_url
   end
 
 end

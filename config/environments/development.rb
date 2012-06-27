@@ -19,4 +19,13 @@ FbGraphSample::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.sendgrid.net",
+    :port                 => 587,
+    :domain		  => 'www.planlater.com',
+    :user_name            => 'welkin',
+    :password             => 'skyknight',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
 end

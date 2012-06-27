@@ -25,7 +25,7 @@ class SubscriptionsController < ApplicationController
       }
     end
     redirect_to subscriptions_url
-  end
+2  end
 
   # for Change Notifications
   def update

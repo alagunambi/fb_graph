@@ -1,0 +1,14 @@
+--- 
+open_files: 
+  - app/views/timeline/show.html.erb
+  - app/controllers/parcels_controller.rb
+  - app/views/parcels/_form.html.erb
+  - app/views/layouts/_sidebar.html.erb
+  - app/views/top/index.html.erb
+  - app/views/layouts/application.html.erb
+  - config/application.rb
+  - app/controllers/application_controller.rb
+  - config/routes.rb
+  - app/controllers/facebooks_controller.rb
+  - app/views/parcels/index.html.erb
+  - app/views/parcels/new.html.erb

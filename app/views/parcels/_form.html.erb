@@ -1,0 +1,57 @@
+<%= form_for(@parcel) do |f| %>
+  <% if @parcel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parcel.errors.count, "error") %> prohibited this parcel from being saved:</h2>
+
+      <ul>
+      <% @parcel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="friends">
+     <% friends_array = current_user.profile.friends.map { |friend| [friend.name + "(" + ")", friend.endpoint] } %>
+     <%# threads_array = current_user.profile.threads.methods %>
+     <%# current_user.profile.send.methods %>
+      <%# threads_array %>
+      <%# current_user.profile.firend(friends_array.first.name)%>
+    <select name="parcel[to]" id="city_id">
+      
+     
+      <%= options_for_select(friends_array) %>
+    </select>
+  </div>
+  <div class="field">
+    <%= f.label current_user.profile.username %>
+    <%= f.hidden_field :from, :value => current_user.profile.username %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule %>
+      <div class="ui-grid-b">
+  	<%= f.datetime_select :schedule %>
+  </div>
+    
+  </div>
+  <div class="field">
+    <%= f.label :category %>
+    <select name="parcel[category]">
+      <option value = 1>Message</option>
+      <option value = 2>Post</option>
+    </select>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

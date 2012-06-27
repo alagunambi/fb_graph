@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  message: MyText
+  schedule: 2012-06-25 22:49:04
+  category: 1
+  status: 1
+  user_id: 1
+
+two:
+  title: MyString
+  message: MyText
+  schedule: 2012-06-25 22:49:04
+  category: 1
+  status: 1
+  user_id: 1

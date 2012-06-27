@@ -1,0 +1,89 @@
+--- 
+cursor_positions: 
+  - :path: app/views/parcels/show.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-06-25 22:49:05 +05:30
+  - :path: app/models/parcel.rb
+    :cursor_offset: 56
+    :timestamp: 2012-06-25 22:54:54 +05:30
+  - :path: app/models/facebook.rb
+    :cursor_offset: 100
+    :timestamp: 2012-06-25 22:54:01 +05:30
+  - :path: app/helpers/application_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-06-24 23:08:19 +05:30
+  - :path: app/mailers/postman.rb
+    :cursor_offset: 87
+    :timestamp: 2012-06-27 06:48:27 +05:30
+  - :path: db/migrate/20120625171904_create_parcels.rb
+    :cursor_offset: 257
+    :timestamp: 2012-06-27 11:53:22 +05:30
+  - :path: lib/tasks/postman.rake
+    :cursor_offset: 337
+    :timestamp: 2012-06-27 10:07:10 +05:30
+  - :path: app/controllers/timeline_controller.rb
+    :cursor_offset: 145
+    :timestamp: 2012-06-25 23:03:45 +05:30
+  - :path: app/controllers/subscriptions_controller.rb
+    :cursor_offset: 788
+    :timestamp: 2012-06-27 11:29:09 +05:30
+  - :path: app/helpers/parcels_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-06-25 22:49:05 +05:30
+  - :path: config/environments/development.rb
+    :cursor_offset: 906
+    :timestamp: 2012-06-27 13:41:35 +05:30
+  - :path: app/controllers/parcels_controller.rb
+    :cursor_offset: 1196
+    :timestamp: 2012-06-27 15:12:12 +05:30
+  - :path: app/views/parcels/_form.html.erb
+    :cursor_offset: 1116
+    :timestamp: 2012-06-27 16:50:30 +05:30
+    :selection_offset: 1079
+    :block_selection_mode: false
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 783
+    :timestamp: 2012-06-27 16:29:59 +05:30
+  - :path: config/routes.rb
+    :cursor_offset: 0
+    :timestamp: 2012-06-25 22:49:04 +05:30
+  - :path: app/controllers/facebooks_controller.rb
+    :cursor_offset: 386
+    :timestamp: 2012-06-27 15:55:44 +05:30
+  - :path: app/views/parcels/new.html.erb
+    :cursor_offset: 90
+    :timestamp: 2012-06-27 16:18:09 +05:30
+  - :path: app/views/parcels/index.html.erb
+    :cursor_offset: 149
+    :timestamp: 2012-06-27 16:12:51 +05:30
+  - :path: app/views/timeline/show.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-06-24 23:08:19 +05:30
+  - :path: app/views/layouts/_sidebar.html.erb
+    :cursor_offset: 245
+    :timestamp: 2012-06-27 15:39:14 +05:30
+    :selection_offset: 143
+    :block_selection_mode: false
+  - :path: app/views/top/index.html.erb
+    :cursor_offset: 48
+    :timestamp: 2012-06-27 15:55:00 +05:30
+    :selection_offset: 241
+    :block_selection_mode: false
+  - :path: config/application.rb
+    :cursor_offset: 0
+    :timestamp: 2012-06-24 23:08:19 +05:30
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 336
+    :timestamp: 2012-06-27 15:37:27 +05:30
+  - :path: lib/authentication.rb
+    :cursor_offset: 878
+    :timestamp: 2012-06-24 23:08:19 +05:30
+  - :path: config/facebook.yml
+    :cursor_offset: 51
+    :timestamp: 2012-06-25 19:04:28 +05:30
+    :selection_offset: 36
+    :block_selection_mode: false
+  - :path: app/views/achievements/index.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-06-24 23:08:19 +05:30
+files_to_retain: 0

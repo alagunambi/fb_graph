@@ -1,0 +1,19 @@
+<ul data-role="listview">
+
+<% @parcels.each do |parcel| %>
+  <li class="ui-btn-inner ui-li">
+    <div class="ui-btn-text">
+      <%= parcel.title %>:
+      <%= parcel.message %>
+    </div>
+    <div class="ui-li-aside ui-li-desc">
+      <%= parcel.schedule %>
+    </div>
+  </li>
+<% end %>
+</ul>
+
+
+<div data-role="footer">
+  <%= link_to 'New Parcel', new_parcel_path %>
+</div>
