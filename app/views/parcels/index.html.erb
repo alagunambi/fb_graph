@@ -1,15 +1,20 @@
 <ul data-role="listview">
 
 <% @parcels.each do |parcel| %>
-  <li class="ui-btn-inner ui-li">
-    <div class="ui-btn-text">
-      <%= parcel.title %>:
-      <%= parcel.message %>
-    </div>
-    <div class="ui-li-aside ui-li-desc">
-      <%= parcel.schedule %>
-    </div>
-  </li>
+  <% if parcel.status == 1 %>
+    <li class="ui-btn-inner ui-li" data-theme="c">
+  <% else %>
+    <li class="ui-btn-inner ui-li">
+  <% end %>
+      <div class="ui-btn-text">
+        <%= parcel.title %>:
+        <%= parcel.message %>
+      </div>
+  
+      <div class="ui-li-aside ui-li-desc">
+        <%= distance_of_time_in_words_to_now(parcel.schedule) %>
+      </div>
+    </li>
 <% end %>
 </ul>
 

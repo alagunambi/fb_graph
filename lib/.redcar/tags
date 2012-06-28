@@ -1,0 +1,11 @@
+1340897875
+Authentication	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	module Authentication
+ControllerMethods	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	  module ControllerMethods
+HelperMethods	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	  module HelperMethods
+Unauthorized	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	  class Unauthorized 
+authenticate	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def authenticate(user)
+authenticated?	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def authenticated?
+current_user	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def current_user
+included	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	  def self.included(base)
+require_authentication	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def require_authentication
+unauthenticate	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def unauthenticate

@@ -7,9 +7,7 @@ namespace :postman do
     if @messages != nil
       @messages.each do |message|
         if message.status != 1
-          p "status success"
           if message.category == 2
-            p "category success"
             app = FbGraph::Application.new(Facebook.config[:client_id], :secret => Facebook.config[:client_secret])
             app.get_access_token
             user = FbGraph::User.new(message.from, :access_token => app.access_token)
@@ -34,12 +32,24 @@ namespace :postman do
             # end
               message.status = 1
             if message.save
+              puts "Post sent and status update"
+            else
+              puts "Post sent failed! "
+            end
+          else
+            p "inside else inside"
+            app = FbGraph::Application.new(Facebook.config[:client_id], :secret => Facebook.config[:client_secret])
+            app.get_access_token
+            user = FbGraph::User.new(message.from, :access_token => app.access_token)
+            user = user.fetch
+            json_object = JSON.parse(open(message.to).read)
+            Postman.fb_message(json_object['username'] + "@facebook.com", user.email , message.message).deliver!
+            message.status = 1
+            if message.save
               puts "Mail sent and status update"
             else
               puts "Mail sent failed! "
             end
-          else
-            #else part
           end
         end
       end
