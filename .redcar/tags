@@ -1,4 +1,4 @@
-1340899437
+1340936853
 Achievement	/devel/off/ruby/rails/fb_graph_sample/app/models/achievement.rb	class Achievement 
 AchievementTest	/devel/off/ruby/rails/fb_graph_sample/test/unit/achievement_test.rb	class AchievementTest 
 AchievementsController	/devel/off/ruby/rails/fb_graph_sample/app/controllers/achievements_controller.rb	class AchievementsController 
@@ -15,6 +15,7 @@ CreateAchievements	/devel/off/ruby/rails/fb_graph_sample/db/migrate/201109270708
 CreateFacebooks	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20100805043508_create_facebooks.rb	class CreateFacebooks 
 CreateParcels	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20120625171904_create_parcels.rb	class CreateParcels 
 CreateSubscriptions	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20110623075710_create_subscriptions.rb	class CreateSubscriptions 
+CreateTests	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20120629022012_create_tests.rb	class CreateTests 
 CreditsController	/devel/off/ruby/rails/fb_graph_sample/app/controllers/credits_controller.rb	class CreditsController 
 CreditsControllerTest	/devel/off/ruby/rails/fb_graph_sample/test/functional/credits_controller_test.rb	class CreditsControllerTest 
 DashboardController	/devel/off/ruby/rails/fb_graph_sample/app/controllers/dashboard_controller.rb	class DashboardController 
@@ -40,7 +41,13 @@ Subscription	/devel/off/ruby/rails/fb_graph_sample/app/models/subscription.rb	cl
 SubscriptionTest	/devel/off/ruby/rails/fb_graph_sample/test/unit/subscription_test.rb	class SubscriptionTest 
 SubscriptionsController	/devel/off/ruby/rails/fb_graph_sample/app/controllers/subscriptions_controller.rb	class SubscriptionsController 
 SubscriptionsControllerTest	/devel/off/ruby/rails/fb_graph_sample/test/functional/subscriptions_controller_test.rb	class SubscriptionsControllerTest 
+Test	/devel/off/ruby/rails/fb_graph_sample/app/models/test.rb	class Test 
 TestCase	/devel/off/ruby/rails/fb_graph_sample/test/test_helper.rb	class ActiveSupport::TestCase
+TestTest	/devel/off/ruby/rails/fb_graph_sample/test/unit/test_test.rb	class TestTest 
+TestsController	/devel/off/ruby/rails/fb_graph_sample/app/controllers/tests_controller.rb	class TestsController 
+TestsControllerTest	/devel/off/ruby/rails/fb_graph_sample/test/functional/tests_controller_test.rb	class TestsControllerTest 
+TestsHelper	/devel/off/ruby/rails/fb_graph_sample/app/helpers/tests_helper.rb	module TestsHelper
+TestsHelperTest	/devel/off/ruby/rails/fb_graph_sample/test/unit/helpers/tests_helper_test.rb	class TestsHelperTest 
 TimelineController	/devel/off/ruby/rails/fb_graph_sample/app/controllers/timeline_controller.rb	class TimelineController 
 TimelineControllerTest	/devel/off/ruby/rails/fb_graph_sample/test/functional/timeline_controller_test.rb	class TimelineControllerTest 
 TopController	/devel/off/ruby/rails/fb_graph_sample/app/controllers/top_controller.rb	class TopController 
@@ -50,6 +57,7 @@ app	/devel/off/ruby/rails/fb_graph_sample/app/models/facebook.rb	    def app
 auth	/devel/off/ruby/rails/fb_graph_sample/app/models/facebook.rb	    def auth(redirect_uri = nil)
 authenticate	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def authenticate(user)
 authenticated?	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def authenticated?
+change	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20120629022012_create_tests.rb	  def change
 config	/devel/off/ruby/rails/fb_graph_sample/app/models/facebook.rb	    def config
 create	/devel/off/ruby/rails/fb_graph_sample/app/controllers/canvas_controller.rb	  def create
 create	/devel/off/ruby/rails/fb_graph_sample/app/controllers/credits_controller.rb	  def create
@@ -58,14 +66,17 @@ create	/devel/off/ruby/rails/fb_graph_sample/app/controllers/timeline_controller
 create	/devel/off/ruby/rails/fb_graph_sample/app/controllers/subscriptions_controller.rb	  def create
 create	/devel/off/ruby/rails/fb_graph_sample/app/controllers/parcels_controller.rb	  def create
 create	/devel/off/ruby/rails/fb_graph_sample/app/controllers/facebooks_controller.rb	  def create
+create	/devel/off/ruby/rails/fb_graph_sample/app/controllers/tests_controller.rb	  def create
 current_user	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def current_user
 destroy	/devel/off/ruby/rails/fb_graph_sample/app/controllers/parcels_controller.rb	  def destroy
 destroy	/devel/off/ruby/rails/fb_graph_sample/app/controllers/facebooks_controller.rb	  def destroy
+destroy	/devel/off/ruby/rails/fb_graph_sample/app/controllers/tests_controller.rb	  def destroy
 down	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20110927070839_create_achievements.rb	  def self.down
 down	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20100805043508_create_facebooks.rb	  def self.down
 down	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20110623075710_create_subscriptions.rb	  def self.down
 down	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20120625171904_create_parcels.rb	  def self.down
 edit	/devel/off/ruby/rails/fb_graph_sample/app/controllers/parcels_controller.rb	  def edit
+edit	/devel/off/ruby/rails/fb_graph_sample/app/controllers/tests_controller.rb	  def edit
 fb_graph_exception	/devel/off/ruby/rails/fb_graph_sample/app/controllers/application_controller.rb	  def fb_graph_exception(e)
 fb_graph_sample_url	/devel/off/ruby/rails/fb_graph_sample/app/helpers/application_helper.rb	  def fb_graph_sample_url
 fb_graph_url	/devel/off/ruby/rails/fb_graph_sample/app/helpers/application_helper.rb	  def fb_graph_url
@@ -78,9 +89,11 @@ index	/devel/off/ruby/rails/fb_graph_sample/app/controllers/achievements_control
 index	/devel/off/ruby/rails/fb_graph_sample/app/controllers/top_controller.rb	  def index
 index	/devel/off/ruby/rails/fb_graph_sample/app/controllers/subscriptions_controller.rb	  def index
 index	/devel/off/ruby/rails/fb_graph_sample/app/controllers/parcels_controller.rb	  def index
+index	/devel/off/ruby/rails/fb_graph_sample/app/controllers/tests_controller.rb	  def index
 new	/devel/off/ruby/rails/fb_graph_sample/app/controllers/achievements_controller.rb	  def new
 new	/devel/off/ruby/rails/fb_graph_sample/app/controllers/parcels_controller.rb	  def new
 new	/devel/off/ruby/rails/fb_graph_sample/app/controllers/facebooks_controller.rb	  def new
+new	/devel/off/ruby/rails/fb_graph_sample/app/controllers/tests_controller.rb	  def new
 oauth2_error	/devel/off/ruby/rails/fb_graph_sample/app/controllers/facebooks_controller.rb	  def oauth2_error(e)
 profile	/devel/off/ruby/rails/fb_graph_sample/app/models/facebook.rb	  def profile
 require_authentication	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def require_authentication
@@ -93,6 +106,7 @@ show	/devel/off/ruby/rails/fb_graph_sample/app/controllers/timeline_controller.r
 show	/devel/off/ruby/rails/fb_graph_sample/app/controllers/subscriptions_controller.rb	  def show
 show	/devel/off/ruby/rails/fb_graph_sample/app/controllers/parcels_controller.rb	  def show
 show	/devel/off/ruby/rails/fb_graph_sample/app/controllers/facebooks_controller.rb	  def show
+show	/devel/off/ruby/rails/fb_graph_sample/app/controllers/tests_controller.rb	  def show
 subscribe!	/devel/off/ruby/rails/fb_graph_sample/app/models/subscription.rb	  def subscribe!(callback)
 test_homepage	/devel/off/ruby/rails/fb_graph_sample/test/performance/browsing_test.rb	  def test_homepage
 unauthenticate	/devel/off/ruby/rails/fb_graph_sample/lib/authentication.rb	    def unauthenticate
@@ -102,3 +116,4 @@ up	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20110623075710_create_subscr
 up	/devel/off/ruby/rails/fb_graph_sample/db/migrate/20120625171904_create_parcels.rb	  def self.up
 update	/devel/off/ruby/rails/fb_graph_sample/app/controllers/subscriptions_controller.rb	  def update
 update	/devel/off/ruby/rails/fb_graph_sample/app/controllers/parcels_controller.rb	  def update
+update	/devel/off/ruby/rails/fb_graph_sample/app/controllers/tests_controller.rb	  def update

@@ -1,4 +1,6 @@
 FbGraphSample::Application.routes.draw do
+  resources :tests
+
   resources :parcels
 
   # Canvas App

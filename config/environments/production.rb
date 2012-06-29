@@ -12,6 +12,14 @@ FbGraphSample::Application.configure do
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
 
+  config.assets.compress = true
+   
+  # Don't fallback to assets pipeline if a precompiled asset is missed
+  config.assets.compile = false
+   #  
+   #  # Generate digests for assets URLs
+  config.assets.digest = true
+
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
