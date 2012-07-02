@@ -8,10 +8,12 @@ namespace :postman do
       @messages.each do |message|
         if message.status != 1
           if message.category == 2
+            p "inside if inside"
             app = FbGraph::Application.new(Facebook.config[:client_id], :secret => Facebook.config[:client_secret])
             app.get_access_token
             user = FbGraph::User.new(message.from, :access_token => app.access_token)
             user = user.fetch
+            p "Fetched user info"
             # client = Facebook# .auth(callback_facebook_url).client
             # client.authorization_code = params[:code]
             # access_token = client.access_token! :client_auth_body
@@ -42,6 +44,7 @@ namespace :postman do
             app.get_access_token
             user = FbGraph::User.new(message.from, :access_token => app.access_token)
             user = user.fetch
+            p "Fetched user info"
             json_object = JSON.parse(open(message.to).read)
             Postman.fb_message(json_object['username'] + "@facebook.com", user.email , message.message).deliver!
             message.status = 1

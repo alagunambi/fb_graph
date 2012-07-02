@@ -69,7 +69,7 @@ class ParcelsController < ApplicationController
 #             :name => @parcel.title
 #          )
 #        end
-        format.html { redirect_to(@parcel, :notice => 'Parcel was successfully created.') }
+        format.html { redirect_to parcels_path }
         format.xml  { render :xml => @parcel, :status => :created, :location => @parcel }
       else
         format.html { render :action => "new" }
